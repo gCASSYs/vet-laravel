@@ -6,7 +6,7 @@
 
 <!-- Scripts do formulário do template -->
 <script src="{{ asset('vet/js/vendor/validator.min.js') }}"></script>
-<script src="{{ asset('vet/js/vendor/form-scripts.js?v=20260613-7') }}"></script>
+<script src="{{ asset('vet/js/vendor/form-scripts.js') }}"></script>
 
 <!-- Script principal do template -->
-<script src="{{ asset('vet/js/script.js?v=20260615-11') }}"></script>
+<script src="{{ asset('vet/js/script.js') }}"></script>
