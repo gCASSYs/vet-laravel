@@ -19,6 +19,3 @@
     @include('site.home.cta')
 
 @endsection
-
-@extends('layout.site')
-

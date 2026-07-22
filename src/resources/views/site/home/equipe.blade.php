@@ -36,7 +36,7 @@
 
                                 {{-- Link externo ainda sem número definido --}}
                                 <a href="#">
-                                    <img src="{{ asset ('vet/images/whatsapp.svg') }}" alt="WhatsApp" class="social-icon-svg" loading="lazy" decoding="async">
+                                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
@@ -65,7 +65,7 @@
 
                                 {{-- Link externo ainda sem número definido --}}
                                 <a href="#">
-                                    <img src="{{ asset ('vet/images/whatsapp.svg') }}" alt="WhatsApp" class="social-icon-svg" loading="lazy" decoding="async">
+                                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
@@ -94,7 +94,7 @@
 
                                 {{-- Link externo ainda sem número definido --}}
                                 <a href="#">
-                                    <img src="{{ asset ('vet/images/whatsapp.svg') }}" alt="WhatsApp" class="social-icon-svg" loading="lazy" decoding="async">
+                                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>

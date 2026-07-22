@@ -20,7 +20,7 @@
                             cães e gatos em todas as fases da vida.
                         </p>
 
-                        <img src="images/payment.png" alt="Formas de pagamento aceitas" class="payment-img">
+                        <img src="{{ asset('vet/images/payment.png') }}" alt="Formas de pagamento aceitas" class="payment-img">
 
                         <div class="footer-social" aria-label="Redes sociais">
                             <a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
