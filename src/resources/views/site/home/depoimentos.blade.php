@@ -23,77 +23,26 @@
 
                     <div id="testimonial">
 
-                        <!-- Item 1 -->
-                        <div class="item">
-                            <div class="rs-box-testimony">
-                                <div class="quote-box">
+                        @foreach ($listaDepo as $linha)
 
-                                    <blockquote class="text-black">
-                                        Fomos atendidos com muita atenção e carinho. A equipe explicou cada etapa do
-                                        tratamento e nos deixou seguros durante todo o processo.
-                                    </blockquote>
+                            <div class="item">
+                                <div class="rs-box-testimony">
+                                    <div class="quote-box">
 
-                                    <p class="quote-name">
-                                        Mariana Souza <span>Tutora</span>
-                                    </p>
+                                        <blockquote class="text-black">
+                                            {{ $linha->mensagem }}
+                                        </blockquote>
 
+                                        <p class="quote-name">
+                                            {{ $linha->DepoimentoCliente->nome ?? 'Tutor Animalis' }}
+                                            <span>{{ $linha->tipo_cliente }}</span>
+                                        </p>
+
+                                    </div>
                                 </div>
                             </div>
-                        </div>
 
-                        <!-- Item 2 -->
-                        <div class="item">
-                            <div class="rs-box-testimony">
-                                <div class="quote-box">
-
-                                    <blockquote class="text-black">
-                                        Atendimento acolhedor, estrutura organizada e acompanhamento cuidadoso.
-                                        A experiência foi muito positiva do início ao fim.
-                                    </blockquote>
-
-                                    <p class="quote-name">
-                                        Carlos Henrique <span>Tutor</span>
-                                    </p>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item 3 -->
-                        <div class="item">
-                            <div class="rs-box-testimony">
-                                <div class="quote-box">
-
-                                    <blockquote class="text-black">
-                                        A Animalis foi essencial em um momento delicado. Recebemos suporte claro,
-                                        rápido e muito profissional.
-                                    </blockquote>
-
-                                    <p class="quote-name">
-                                        Patrícia Lima <span>Tutora</span>
-                                    </p>
-
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Item 4 -->
-                        <div class="item">
-                            <div class="rs-box-testimony">
-                                <div class="quote-box">
-
-                                    <blockquote class="text-black">
-                                        O cuidado com o nosso pet fez toda a diferença. Recomendo pela atenção e pelo
-                                        compromisso com a saúde animal.
-                                    </blockquote>
-
-                                    <p class="quote-name">
-                                        Rafael Gomes <span>Tutor</span>
-                                    </p>
-
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
 
                     </div>
 

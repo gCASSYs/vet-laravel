@@ -95,14 +95,19 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('home') }}">SOBRE</a>
+                            <a class="nav-link" href="{{ route('sobre') }}">SOBRE</a>
                         </li>
 
                         <li class="nav-item dropdown dmenu">
-                            <a class="nav-link dropdown-toggle" href="{{ route('home') }}" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                SERVIÇOS
-                            </a>
+                            <div class="d-flex align-items-center">
+                                <a class="nav-link pr-1" href="{{ route('servicos') }}">SERVIÇOS</a>
+
+                                <a class="nav-link dropdown-toggle dropdown-toggle-split pl-1" href="#"
+                                    role="button" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false" aria-label="Abrir submenu de serviços">
+                                    <span class="sr-only">Abrir submenu de serviços</span>
+                                </a>
+                            </div>
 
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="{{ route('home') }}">Consultas</a>
@@ -115,21 +120,21 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('home') }}">DÚVIDAS</a>
+                            <a class="nav-link" href="{{ route('duvidas') }}">DÚVIDAS</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('home') }}">GALERIA</a>
+                            <a class="nav-link" href="{{ route('galeria') }}">GALERIA</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('home') }}">CONTATO</a>
+                            <a class="nav-link" href="{{ route('contato') }}">CONTATO</a>
                         </li>
 
                     </ul>
 
                     <!-- Botão principal -->
-                    <a href="{{ route('home') }}" class="btn btn-secondary btn-nav btn-rect ml-auto">
+                    <a href="{{ route('contato') }}" class="btn btn-secondary btn-nav btn-rect ml-auto">
                         FALE CONOSCO
                     </a>
 

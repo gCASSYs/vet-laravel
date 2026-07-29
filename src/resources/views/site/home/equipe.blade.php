@@ -1,6 +1,6 @@
 <!-- ANIMALIS: equipe da home -->
 <!-- MEET VETERINARY -->
-<div id="equipe" class="">
+<div id="veterinary" class="section-border">
     <div class="content-wrap">
         <div class="container">
 
@@ -12,7 +12,7 @@
                     </h2>
 
                     <p class="subheading text-center">
-                        Profissionais preparados para acolher, orientar e cuidar com excelência.
+                        Profissionais preparados para cuidar com técnica, atenção e acolhimento.
                     </p>
 
                 </div>
@@ -20,99 +20,63 @@
 
             <div class="row mt-4">
 
-                <!-- Item 1 -->
-                <div class="col-12 col-sm-6 col-md-4">
-                    <div class="rs-team-1">
+                @foreach ($listaEquipe as $linha)
 
-                        <div class="media">
-                            <img src="{{ asset ('vet/images/equipe1.jpeg') }}" alt="Profissional da equipe Animalis" class="img-fluid" loading="lazy" decoding="async">
+                    <div class="col-12 col-sm-6 col-md-4">
+                        <div class="rs-team-1">
 
-                            <div class="sosmed-icon">
-                                {{-- Link externo ainda sem endereço definido --}}
-                                <a href="#"><i class="fa fa-facebook"></i></a>
+                            <div class="media">
+                                <img src="{{ asset('vet/images/' . $linha->imagem) }}"
+                                    alt="{{ $linha->nome }}"
+                                    class="img-fluid"
+                                    loading="lazy"
+                                    decoding="async">
 
-                                {{-- Link externo ainda sem endereço definido --}}
-                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <div class="sosmed-icon">
 
-                                {{-- Link externo ainda sem número definido --}}
-                                <a href="#">
-                                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                                </a>
+                                    {{-- Link externo: Facebook --}}
+                                    <a href="{{ $linha->facebook ?? '#' }}">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+
+                                    {{-- Link externo: Instagram --}}
+                                    <a href="{{ $linha->instagram ?? '#' }}">
+                                        <i class="fa fa-instagram"></i>
+                                    </a>
+
+                                    {{-- Link externo: WhatsApp --}}
+                                    <a href="{{ $linha->whatsapp ?? '#' }}">
+                                        <img src="{{ asset('vet/images/whatsapp.svg') }}"
+                                            alt="WhatsApp"
+                                            class="social-icon-svg"
+                                            loading="lazy"
+                                            decoding="async">
+                                    </a>
+
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="body">
-                            <div class="title">Dra. Ana Martins</div>
-                            <div class="text-primary">Veterinária</div>
-                        </div>
+                            <div class="body">
+                                <div class="title">
+                                    {{ $linha->nome }}
+                                </div>
 
-                    </div>
-                </div>
-
-                <!-- Item 2 -->
-                <div class="col-12 col-sm-6 col-md-4">
-                    <div class="rs-team-1">
-
-                        <div class="media">
-                            <img src="{{ asset ('vet/images/equipe2.jpeg') }}" alt="Profissional da equipe Animalis" class="img-fluid" loading="lazy" decoding="async">
-
-                            <div class="sosmed-icon">
-                                {{-- Link externo ainda sem endereço definido --}}
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-
-                                {{-- Link externo ainda sem endereço definido --}}
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-
-                                {{-- Link externo ainda sem número definido --}}
-                                <a href="#">
-                                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                                </a>
+                                <div class="text-primary">
+                                    {{ $linha->cargo }}
+                                </div>
                             </div>
-                        </div>
 
-                        <div class="body">
-                            <div class="title">Dr. Bruno Almeida</div>
-                            <div class="text-primary">Veterinário</div>
                         </div>
-
                     </div>
-                </div>
 
-                <!-- Item 3 -->
-                <div class="col-12 col-sm-6 col-md-4">
-                    <div class="rs-team-1">
-
-                        <div class="media">
-                            <img src="{{ asset ('vet/images/equipe3.jpeg') }}" alt="Profissional da equipe Animalis" class="img-fluid" loading="lazy" decoding="async">
-
-                            <div class="sosmed-icon">
-                                {{-- Link externo ainda sem endereço definido --}}
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-
-                                {{-- Link externo ainda sem endereço definido --}}
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-
-                                {{-- Link externo ainda sem número definido --}}
-                                <a href="#">
-                                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="body">
-                            <div class="title">Dra. Camila Rocha</div>
-                            <div class="text-primary">Veterinária</div>
-                        </div>
-
-                    </div>
-                </div>
+                @endforeach
 
             </div>
 
             <div class="row">
                 <div class="col-sm-12 col-md-12 text-center">
-                    {{-- Link interno: futura página da equipe/sobre --}}
-                    <a href="{{ route ('home') }}" class="btn btn-secondary mt-5">
+                    {{-- Link interno: página de contato --}}
+                    <a href="{{ route('contato') }}" class="btn btn-secondary mt-5">
                         Conheça mais
                     </a>
                 </div>

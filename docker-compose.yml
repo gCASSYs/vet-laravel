@@ -24,13 +24,25 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: vet
+      MYSQL_DATABASE: db_vet
       MYSQL_USER: laravel
       MYSQL_PASSWORD: laravel
     ports:
       - "3307:3306"
     volumes:
       - mysql_data:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: vet-phpmyadmin
+    restart: always
+    ports:
+      - "8081:80"
+    environment:
+      PMA_HOST: mysql
+      PMA_PORT: 3306
+    depends_on:
+      - mysql
 
 volumes:
   mysql_data:
