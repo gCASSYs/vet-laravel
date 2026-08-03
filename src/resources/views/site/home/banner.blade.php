@@ -1,5 +1,3 @@
-<!-- ANIMALIS: banner principal da home -->
-<!-- BANNER -->
 <div id="oc-fullslider" class="banner home-hero banner-fixed">
 
     @foreach ($listaBanner as $linha)
@@ -17,7 +15,6 @@
                             {{ $linha->subtitulo }}
                         </p>
 
-                        {{-- Link interno: página de contato --}}
                         <a href="{{ route('contato') }}" class="btn btn-primary">
                             Fale conosco
                         </a>
