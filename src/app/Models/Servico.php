@@ -2,7 +2,6 @@
 
 namespace App\Models;
 
-use App\Models\HorarioServico;
 use Illuminate\Database\Eloquent\Model;
 
 class Servico extends Model{

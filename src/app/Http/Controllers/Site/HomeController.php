@@ -28,9 +28,10 @@ class HomeController extends Controller{
             ->orderBy('ordem_exibicao', 'asc')
             ->get();
 
-        // Busca os serviços ativos para exibir na home
+        // Busca os 3 primeiros serviços ativos para exibir na home
         $listaServico = Servico::where('ativo', 1)
             ->orderBy('ordem_exibicao', 'asc')
+            ->limit(3)
             ->get();
 
         // Busca a equipe ativa e liberada para aparecer no site

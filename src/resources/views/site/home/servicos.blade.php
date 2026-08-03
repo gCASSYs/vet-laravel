@@ -1,6 +1,5 @@
 <!-- ANIMALIS: serviços da home -->
-<!-- OUR SERVICES -->
-<div id="servicos" class="">
+<div id="servicos">
     <div class="content-wrap">
         <div class="container">
 
@@ -26,25 +25,23 @@
                         <div class="rs-image-box">
 
                             <div class="media">
-                                {{-- Link interno: página de serviços --}}
                                 <a href="{{ route('servicos') }}">
                                     <img src="{{ asset('vet/images/' . $linha->imagem) }}"
                                         alt="{{ $linha->nome }}"
-                                        class="img-fluid"
-                                        loading="lazy"
-                                        decoding="async">
+                                        class="img-fluid">
                                 </a>
                             </div>
 
                             <div class="body-text">
                                 <h3 class="title">
-                                    {{-- Link interno: página de serviços --}}
                                     <a href="{{ route('servicos') }}">
                                         {{ $linha->nome }}
                                     </a>
                                 </h3>
 
-                                {{ $linha->descricao_curta }}
+                                <p>
+                                    {{ $linha->descricao_curta }}
+                                </p>
                             </div>
 
                         </div>
@@ -56,7 +53,6 @@
 
             <div class="row">
                 <div class="col-sm-12 col-md-12 text-center">
-                    {{-- Link interno: página de serviços --}}
                     <a href="{{ route('servicos') }}" class="btn btn-secondary mt-5">
                         Ver mais
                     </a>

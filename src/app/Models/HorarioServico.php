@@ -20,7 +20,7 @@ class HorarioServico extends Model{
         'ativo'
     ];
 
-    // Um horário pertence a um serviço
+    // Cada horário pertence a um serviço
     public function HorarioServico(){
 
         return $this->belongsTo(Servico::class, 'id_servico', 'id_servico');

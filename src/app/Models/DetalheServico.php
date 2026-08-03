@@ -19,7 +19,7 @@ class DetalheServico extends Model{
         'ativo'
     ];
 
-    // Um detalhe pertence a um serviço
+    // Cada detalhe pertence a um serviço
     public function DetalheServico(){
 
         return $this->belongsTo(Servico::class, 'id_servico', 'id_servico');
