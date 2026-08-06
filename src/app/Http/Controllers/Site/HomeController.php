@@ -46,15 +46,6 @@ class HomeController extends Controller{
             ->orderBy('ordem_exibicao', 'asc')
             ->get();
 
-        // Busca imagens ativas da galeria
-        $listaGaleria = Galeria::where('ativo', 1)
-            ->orderBy('ordem_exibicao', 'asc')
-            ->get();
-
-        // Busca perguntas frequentes ativas
-        $listaFaq = Faq::where('ativo', 1)
-            ->orderBy('ordem_exibicao', 'asc')
-            ->get();
 
         // Busca as configurações gerais do site
         $configuracao = ConfiguracaoSite::first();
@@ -65,8 +56,6 @@ class HomeController extends Controller{
             'listaServico',
             'listaEquipe',
             'listaDepo',
-            'listaGaleria',
-            'listaFaq',
             'configuracao'
         ));
 

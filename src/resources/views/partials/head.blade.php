@@ -25,7 +25,7 @@
 <link rel="stylesheet" type="text/css" href="{{ asset('vet/css/vendor/animate.min.css') }}">
 
 <!-- CSS principal -->
-<link rel="stylesheet" type="text/css" href="{{ asset('vet/css/style.css') }}">
+<link rel="stylesheet" type="text/css" href="{{ asset('vet/css/style.css?v=20260806-1') }}">
 
 <!-- Modernizr -->
 <script src="{{ asset('vet/js/vendor/modernizr.min.js') }}"></script>

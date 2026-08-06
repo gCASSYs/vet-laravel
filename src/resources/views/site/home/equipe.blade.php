@@ -28,20 +28,6 @@
                                 <img src="{{ asset('vet/images/' . $linha->imagem) }}"
                                     alt="{{ $linha->nome }}"
                                     class="img-fluid">
-                            </div>
-
-                            <div class="body">
-                                <div class="title">
-                                    {{ $linha->nome }}
-                                </div>
-
-                                <div class="position">
-                                    {{ $linha->cargo }}
-                                </div>
-
-                                <p>
-                                    {{ $linha->descricao }}
-                                </p>
 
                                 <div class="sosmed-icon d-inline-flex">
 
@@ -76,11 +62,33 @@
                                 </div>
                             </div>
 
+                            <div class="body">
+                                <div class="title">
+                                    {{ $linha->nome }}
+                                </div>
+
+                                <div class="position text-primary">
+                                    {{ $linha->cargo }}
+                                </div>
+
+                                <p>
+                                    {{ $linha->descricao }}
+                                </p>
+                            </div>
+
                         </div>
                     </div>
 
                 @endforeach
 
+            </div>
+
+            <div class="row">
+                <div class="col-sm-12 col-md-12 text-center">
+                    <a href="{{ route('sobre') }}" class="btn btn-secondary mt-5">
+                        Conheça mais
+                    </a>
+                </div>
             </div>
 
         </div>

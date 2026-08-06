@@ -14,6 +14,7 @@ Route::get('/servicos', [ServicosController::class, 'servicos'])->name('servicos
 Route::get('/galeria', [GaleriaController::class, 'galeria'])->name('galeria');
 Route::get('/duvidas', [DuvidasController::class, 'duvidas'])->name('duvidas');
 Route::get('/contato', [ContatoController::class, 'contato'])->name('contato');
+Route::post('/contato/enviar', [ContatoController::class, 'enviar'])->name('contato.enviar');
 
 //Basicamente ele está dizendo: quando clicar vai ir para o Controller correspondente,
 //pois cada página tem uma classe, e o name serve para facilitar a chamada no menu com route().

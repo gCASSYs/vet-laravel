@@ -4,6 +4,14 @@
     <div class="content-wrap pt-0">
         <div class="container">
 
+            @php
+                $numeroWhatsapp = preg_replace('/\D/', '', $configuracao->whatsapp);
+
+                if (strlen($numeroWhatsapp) == 11) {
+                    $numeroWhatsapp = '55' . $numeroWhatsapp;
+                }
+            @endphp
+
             <div class="row mt-4">
 
                 <!-- Item 1 -->
@@ -15,7 +23,7 @@
 
                         <div class="body">
                             <h3 class="title">Endereço</h3>
-                            <p class="mb-1">Avenida Marechal Tito, 1500 - São Paulo, SP</p>
+                            <p class="mb-1">{{ $configuracao->endereco }} - {{ $configuracao->cidade }} - {{ $configuracao->estado }}</p>
                             <p>Atendimento 24 horas</p>
                         </div>
                     </div>
@@ -30,7 +38,7 @@
 
                         <div class="body">
                             <h3 class="title">E-mail</h3>
-                            <p class="mb-1">contato@animalis.com.br</p>
+                            <p class="mb-1">{{ $configuracao->email }}</p>
                             <p>Fale com a nossa equipe</p>
                         </div>
                     </div>
@@ -45,7 +53,7 @@
 
                         <div class="body">
                             <h3 class="title">Telefone</h3>
-                            <p class="mb-1">2555-5555 / (11) 99999-9999</p>
+                            <p class="mb-1">{{ $configuracao->telefone }} / <a href="https://wa.me/{{ $numeroWhatsapp }}">{{ $configuracao->whatsapp }}</a></p>
                             <p>Atendimento 24 horas</p>
                         </div>
                     </div>
@@ -69,7 +77,13 @@
 
                 <div class="col-12 col-sm-12 col-md-12">
 
-                    <form action="#" method="post" class="form-contact" id="contactForm" data-toggle="validator" novalidate>
+                    @if (session('sucesso'))
+                        <div class="alert alert-success">
+                            {{ session('sucesso') }}
+                        </div>
+                    @endif
+
+                   <form action="{{ route('contato.enviar') }}" method="POST">
                         @csrf
 
                         <div class="row">
@@ -79,7 +93,7 @@
                                     <input type="text"
                                         class="form-control"
                                         id="p_name"
-                                        name="name"
+                                        name="nome"
                                         placeholder="Nome"
                                         autocomplete="name"
                                         required>
@@ -107,7 +121,7 @@
                                     <input type="text"
                                         class="form-control"
                                         id="p_subject"
-                                        name="subject"
+                                        name="assunto"
                                         placeholder="Assunto"
                                         required>
 
@@ -120,7 +134,7 @@
                                     <input type="tel"
                                         class="form-control"
                                         id="p_phone"
-                                        name="phone"
+                                        name="telefone"
                                         placeholder="Telefone / WhatsApp"
                                         autocomplete="tel">
 
@@ -140,7 +154,7 @@
 
                         <div class="form-group">
                             <textarea id="p_message"
-                                name="message"
+                                name="mensagem"
                                 class="form-control"
                                 rows="6"
                                 placeholder="Mensagem"
@@ -154,7 +168,7 @@
                                 <div id="success"></div>
 
                                 <button type="submit" class="btn btn-primary">
-                                    Enviar mensagem
+                                    Enviar
                                 </button>
                             </div>
                         </div>
