@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\ConfiguracaoSite;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +20,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        $configuracao = ConfiguracaoSite::where('id_configuracao', 1)->first();
+
+        view()->share('configuracao', $configuracao);
     }
 }

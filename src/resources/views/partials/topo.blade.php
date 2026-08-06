@@ -1,3 +1,11 @@
+@php
+    $numeroWhatsapp = preg_replace('/\D/', '', $configuracao->whatsapp);
+
+    if (strlen($numeroWhatsapp) == 11) {
+        $numeroWhatsapp = '55' . $numeroWhatsapp;
+    }
+@endphp
+
 <!-- LOAD PAGE -->
 <div class="animationload">
     <div class="loader"></div>
@@ -20,9 +28,9 @@
 
                 <div class="col-sm-6 col-md-6">
                     <div class="sosmed-icon d-inline-flex pull-right">
-                        <a href="#" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
-                        <a href="#" aria-label="WhatsApp"><i class="fa fa-whatsapp"></i></a>
+                        <a href="{{ $configuracao->facebook }}" aria-label="Facebook"><i class="fa fa-facebook"></i></a>
+                        <a href="{{ $configuracao->instagram }}" aria-label="Instagram"><i class="fa fa-instagram"></i></a>
+                        <a href="https://wa.me/{{ $numeroWhatsapp }}" aria-label="WhatsApp"><i class="fa fa-whatsapp"></i></a>
                     </div>
                 </div>
 
@@ -54,7 +62,7 @@
                     </div>
                     <div class="body-content">
                         <div class="heading">Telefone</div>
-                        2555-5555 / (11) 99999-9999
+                        {{ $configuracao->telefone }} / {{ $configuracao->whatsapp }}
                     </div>
                 </div>
 

@@ -1,6 +1,6 @@
 <!-- ANIMALIS: hero da página sobre -->
 <!-- BANNER -->
-<div class="section banner-page">
+<div class="section banner-page" style="background-image: url('{{ asset('vet/images/sobre/sobre-extra.jpeg') }}');">
     <div class="content-wrap pos-relative">
         <div class="d-flex justify-content-center bd-highlight mb-2">
 

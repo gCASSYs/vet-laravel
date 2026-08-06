@@ -7,7 +7,7 @@
 
                 <div class="col-sm-12 col-md-6">
 
-                    <img src="{{ asset('vet/images/img_sobre_sobre.png') }}"
+                    <img src="{{ asset('vet/images/sobre/sobre.png') }}"
                         alt="Equipe da Animalis durante atendimento veterinário"
                         class="img-fluid img-border about-page-photo"
                         loading="lazy"

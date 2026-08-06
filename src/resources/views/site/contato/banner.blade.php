@@ -1,6 +1,6 @@
 <!-- ANIMALIS: informações de contato padronizadas -->
 <!-- BANNER -->
-<div class="section banner-page">
+<div class="section banner-page" style="background-image: url('{{ asset('vet/images/banner/banner-contato.jpeg') }}');">
     <div class="content-wrap pos-relative">
         <div class="d-flex justify-content-center bd-highlight mb-2">
 

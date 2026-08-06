@@ -25,7 +25,7 @@
                     <div class="rs-team-1">
 
                         <div class="media">
-                            <img src="{{ asset ('vet/images/equipe1.jpeg') }}" alt="Profissional da equipe Animalis" class="img-fluid" loading="lazy" decoding="async">
+                            <img src="{{ asset('vet/images/equipe/bruno.jpeg') }}" alt="Profissional da equipe Animalis" class="img-fluid" loading="lazy" decoding="async">
 
                             <div class="sosmed-icon">
                                 {{-- Link externo ainda sem endereço definido --}}
@@ -54,7 +54,7 @@
                     <div class="rs-team-1">
 
                         <div class="media">
-                            <img src="{{ asset ('vet/images/equipe2.jpeg') }}" alt="Profissional da equipe Animalis" class="img-fluid" loading="lazy" decoding="async">
+                            <img src="{{ asset('vet/images/equipe/ana.jpeg') }}" alt="Profissional da equipe Animalis" class="img-fluid" loading="lazy" decoding="async">
 
                             <div class="sosmed-icon">
                                 {{-- Link externo ainda sem endereço definido --}}
@@ -83,7 +83,7 @@
                     <div class="rs-team-1">
 
                         <div class="media">
-                            <img src="{{ asset ('vet/images/equipe3.jpeg') }}" alt="Profissional da equipe Animalis" class="img-fluid" loading="lazy" decoding="async">
+                            <img src="{{ asset('vet/images/equipe/camila.jpeg') }}" alt="Profissional da equipe Animalis" class="img-fluid" loading="lazy" decoding="async">
 
                             <div class="sosmed-icon">
                                 {{-- Link externo ainda sem endereço definido --}}

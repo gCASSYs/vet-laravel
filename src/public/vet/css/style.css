@@ -888,7 +888,7 @@ blockquote {
   background-size: cover;
   position: relative;
   background-position: center;
-  background-image: url("../vet/images/banner2.jpeg") !important;
+  background-image: url("../images/banner/banner-home.jpeg");
   background-color: #163A3A;
   background-repeat: no-repeat; }
   .banner-page:before {
