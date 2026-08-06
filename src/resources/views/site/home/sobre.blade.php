@@ -1,6 +1,6 @@
 <!-- ANIMALIS: seção sobre da home -->
 <!-- ABOUT -->
-<div id="sobre" class="section bgi-left bgi-hide-xs about-animalis-section" data-background="{{ asset ('vet/images/img_sobre.jpeg') }}">
+<div id="sobre" class="section bgi-left bgi-hide-xs about-animalis-section" style="background-image: url('{{ asset('vet/images/sobre-home.jpg') }}');">
     <div class="content-wrap">
         <div class="container">
             <div class="row">

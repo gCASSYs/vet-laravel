@@ -18,7 +18,7 @@ class Depoimento extends Model{
         'ativo'
     ];
 
-    // Um depoimento pertence a um cliente
+    // Cada depoimento pertence a um cliente
     public function DepoimentoCliente(){
 
         return $this->belongsTo(Cliente::class, 'id_cliente', 'id_cliente');

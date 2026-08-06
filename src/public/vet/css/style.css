@@ -749,7 +749,6 @@ ul {
 .about-animalis-section {
   overflow: hidden;
   margin-top: 0;
-  background-image: url("../images/img_sobre.jpeg") !important;
   background-position: left bottom;
   background-size: auto 80%;
   background-repeat: no-repeat; }
@@ -778,8 +777,6 @@ blockquote {
   font-style: italic; }
 
 @media (max-width: 767px), (min-width: 768px) and (max-width: 991px) and (hover: none) and (pointer: coarse) {
-  .about-animalis-section {
-    background-image: none !important; }
   .about-animalis-section,
   .about-animalis-section > .content-wrap {
     min-height: 0; }

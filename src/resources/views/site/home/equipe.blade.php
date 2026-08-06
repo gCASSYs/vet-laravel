@@ -1,6 +1,5 @@
 <!-- ANIMALIS: equipe da home -->
-<!-- MEET VETERINARY -->
-<div id="veterinary" class="section-border">
+<div id="equipe">
     <div class="content-wrap">
         <div class="container">
 
@@ -8,11 +7,11 @@
                 <div class="col-sm-12 col-md-12">
 
                     <h2 class="section-heading text-center text-primary no-after mb-5">
-                        Conheça a equipe
+                        Nossa equipe
                     </h2>
 
                     <p class="subheading text-center">
-                        Profissionais preparados para cuidar com técnica, atenção e acolhimento.
+                        Profissionais preparados para cuidar do seu pet com atenção, responsabilidade e carinho.
                     </p>
 
                 </div>
@@ -28,32 +27,7 @@
                             <div class="media">
                                 <img src="{{ asset('vet/images/' . $linha->imagem) }}"
                                     alt="{{ $linha->nome }}"
-                                    class="img-fluid"
-                                    loading="lazy"
-                                    decoding="async">
-
-                                <div class="sosmed-icon">
-
-                                    {{-- Link externo: Facebook --}}
-                                    <a href="{{ $linha->facebook ?? '#' }}">
-                                        <i class="fa fa-facebook"></i>
-                                    </a>
-
-                                    {{-- Link externo: Instagram --}}
-                                    <a href="{{ $linha->instagram ?? '#' }}">
-                                        <i class="fa fa-instagram"></i>
-                                    </a>
-
-                                    {{-- Link externo: WhatsApp --}}
-                                    <a href="{{ $linha->whatsapp ?? '#' }}">
-                                        <img src="{{ asset('vet/images/whatsapp.svg') }}"
-                                            alt="WhatsApp"
-                                            class="social-icon-svg"
-                                            loading="lazy"
-                                            decoding="async">
-                                    </a>
-
-                                </div>
+                                    class="img-fluid">
                             </div>
 
                             <div class="body">
@@ -61,8 +35,44 @@
                                     {{ $linha->nome }}
                                 </div>
 
-                                <div class="text-primary">
+                                <div class="position">
                                     {{ $linha->cargo }}
+                                </div>
+
+                                <p>
+                                    {{ $linha->descricao }}
+                                </p>
+
+                                <div class="sosmed-icon d-inline-flex">
+
+                                    @if (!empty($linha->facebook))
+                                        <a href="{{ $linha->facebook }}" target="_blank">
+                                            <i class="fa fa-facebook"></i>
+                                        </a>
+                                    @endif
+
+                                    @if (!empty($linha->instagram))
+                                        <a href="{{ $linha->instagram }}" target="_blank">
+                                            <i class="fa fa-instagram"></i>
+                                        </a>
+                                    @endif
+
+                                    @if (!empty($linha->whatsapp))
+
+                                        @php
+                                            $numeroWhatsapp = preg_replace('/\D/', '', $linha->whatsapp);
+
+                                            if (strlen($numeroWhatsapp) == 11) {
+                                                $numeroWhatsapp = '55' . $numeroWhatsapp;
+                                            }
+                                        @endphp
+
+                                        <a href="https://wa.me/{{ $numeroWhatsapp }}" target="_blank">
+                                            <i class="fa fa-phone"></i>
+                                        </a>
+
+                                    @endif
+
                                 </div>
                             </div>
 
@@ -71,15 +81,6 @@
 
                 @endforeach
 
-            </div>
-
-            <div class="row">
-                <div class="col-sm-12 col-md-12 text-center">
-                    {{-- Link interno: página de contato --}}
-                    <a href="{{ route('contato') }}" class="btn btn-secondary mt-5">
-                        Conheça mais
-                    </a>
-                </div>
             </div>
 
         </div>

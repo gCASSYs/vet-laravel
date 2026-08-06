@@ -1,5 +1,4 @@
 <!-- ANIMALIS: depoimentos da home -->
-<!-- HAPPY CLIENTS -->
 <div class="section testimonials-section">
     <div class="content-wrap">
         <div class="container">

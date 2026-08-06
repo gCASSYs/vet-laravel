@@ -34,7 +34,7 @@ class HomeController extends Controller{
             ->limit(3)
             ->get();
 
-        // Busca a equipe ativa e liberada para aparecer no site
+        // Busca os funcionários ativos que devem aparecer no site
         $listaEquipe = Funcionario::where('ativo', 1)
             ->where('exibir_site', 1)
             ->orderBy('ordem_exibicao', 'asc')
