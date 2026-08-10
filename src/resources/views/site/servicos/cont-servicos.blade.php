@@ -12,7 +12,7 @@
 
                         <div class="media">
                             {{-- Link interno: futura página de detalhe do serviço --}}
-                            <a href="{{ route('servicos') }}">
+                            <a href="{{ route('servicos.detalhe', $linha->slug) }}">
                                 <img src="{{ asset('vet/images/' . $linha->imagem) }}"
                                     alt="{{ $linha->nome }}"
                                     class="img-fluid"
@@ -24,7 +24,9 @@
                         <div class="body-text">
                             <h3 class="title">
                                 {{-- Link interno: futura página de detalhe do serviço --}}
-                                <a href="{{ route('servicos') }}">{{ $linha->nome }}</a>
+                                <a href="{{ route('servicos.detalhe', $linha->slug) }}">
+                                    {{ $linha->nome }}
+                                </a>
                             </h3>
 
                             {{ $linha->descricao_curta }}

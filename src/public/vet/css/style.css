@@ -2312,7 +2312,8 @@ Back To Top Section
   align-items: center;
   min-height: 80px;
   color: #163A3A;
-  line-height: 1; }
+  line-height: 1; 
+  margin-left: -20px;}
   .brand-logo > .fa {
     margin-right: 11px;
     color: #C96B4B;
@@ -2399,7 +2400,7 @@ Back To Top Section
     margin-right: 40px;
     margin-top: 6px; }
     .contact-info > div:last-child {
-      margin-right: 0; }
+      margin-right: -66px}
     @media (max-width: 767px) {
       .contact-info > div {
         margin-right: 20px; } }

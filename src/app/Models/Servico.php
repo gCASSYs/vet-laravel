@@ -12,6 +12,7 @@ class Servico extends Model{
 
     protected $fillable = [
         'nome',
+        'slug',
         'descricao_curta',
         'imagem',
         'ordem_exibicao',

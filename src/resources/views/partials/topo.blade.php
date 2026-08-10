@@ -118,12 +118,12 @@
                             </div>
 
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="{{ route('home') }}">Consultas</a>
-                                <a class="dropdown-item" href="{{ route('home') }}">Vacinas</a>
-                                <a class="dropdown-item" href="{{ route('home') }}">Exames</a>
-                                <a class="dropdown-item" href="{{ route('home') }}">Cirurgias</a>
-                                <a class="dropdown-item" href="{{ route('home') }}">Internação</a>
-                                <a class="dropdown-item" href="{{ route('home') }}">Emergência</a>
+                                <a class="dropdown-item" href="{{ route('servicos.detalhe', 'consultas') }}">Consultas</a>
+                                <a class="dropdown-item" href="{{ route('servicos.detalhe', 'vacinas') }}">Vacinas</a>
+                                <a class="dropdown-item" href="{{ route('servicos.detalhe', 'exames') }}">Exames</a>
+                                <a class="dropdown-item" href="{{ route('servicos.detalhe', 'cirurgias') }}">Cirurgias</a>
+                                <a class="dropdown-item" href="{{ route('servicos.detalhe', 'internacao') }}">Internação</a>
+                                <a class="dropdown-item" href="{{ route('servicos.detalhe', 'emergencia') }}">Emergência</a>
                             </div>
                         </li>
 

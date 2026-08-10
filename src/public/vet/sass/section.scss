@@ -241,7 +241,8 @@
   -ms-box-shadow: 0 0 0 0 rgba($white, 0.3);
   -o-box-shadow: 0 0 0 0 rgba($white, 0.3);
   box-shadow: 0 0 0 0 rgba($white, 0.3);
-  animation: ripple 2s infinite; }
+  animation: ripple 2s infinite; 
+}
 
 .ripple:before {
   animation-delay: .9s;
