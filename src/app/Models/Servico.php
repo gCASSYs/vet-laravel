@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Servico extends Model{
 
@@ -31,6 +32,13 @@ class Servico extends Model{
 
         return $this->hasMany(HorarioServico::class, 'id_servico', 'id_servico');
 
+    }
+
+    // Relacionamento um para muitos:
+    // o mesmo serviço pode aparecer em vários agendamentos.
+    public function agendamentos(): HasMany
+    {
+        return $this->hasMany(Agendamento::class, 'id_servico', 'id_servico');
     }
 
 }// FIM DA CLASS

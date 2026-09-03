@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Cliente extends Model{
 
@@ -23,6 +24,13 @@ class Cliente extends Model{
 
         return $this->hasMany(Depoimento::class, 'id_cliente', 'id_cliente');
 
+    }
+
+    // Relacionamento um para muitos:
+    // um cliente pode realizar vários agendamentos.
+    public function agendamentos(): HasMany
+    {
+        return $this->hasMany(Agendamento::class, 'id_cliente', 'id_cliente');
     }
 
 }// FIM DA CLASS
