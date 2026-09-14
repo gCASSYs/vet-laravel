@@ -1,5 +1,5 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Área Administrativa</title>
+    <title>Animalis | Área Administrativa</title>
 
     <!--begin::Theme Init (prevents flash of incorrect theme on load, #6043)-->
     <script>
@@ -45,20 +45,20 @@
     <!--begin::Accessibility Meta Tags-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
     <meta name="color-scheme" content="light dark" />
-    <meta name="theme-color" content="#f3e8d6" media="(prefers-color-scheme: light)" />
-    <meta name="theme-color" content="#160f0c" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#163A3A" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#102929" media="(prefers-color-scheme: dark)" />
     <!--end::Accessibility Meta Tags-->
 
     <!--begin::Primary Meta Tags-->
-    <meta name="title" content="Área Administrativa" />
-    <meta name="author" content="Casa do Barista" />
+    <meta name="title" content="Animalis | Área Administrativa" />
+    <meta name="author" content="Animalis Clínica Veterinária" />
     <meta
       name="description"
-      content="Painel administrativo da Casa do Barista."
+      content="Painel administrativo da Animalis Clínica Veterinária."
     />
     <meta
       name="keywords"
-      content="Casa do Barista, painel administrativo, café"
+      content="Animalis, clínica veterinária, painel administrativo"
     />
     <!--end::Primary Meta Tags-->
 
@@ -68,7 +68,7 @@
     <link rel="preload" href= "{{ asset('admin/css/adminlte.css') }}" as="style" />
     <!--end::Accessibility Features-->
 
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('barista/assets/icon/favicon-32x32.png') }}" />
+    <link rel="icon" type="image/svg+xml" href="{{ asset('vet/images/favicon.svg') }}" />
 
     <!--begin::Third Party Plugin(OverlayScrollbars)-->
     <link
@@ -89,6 +89,8 @@
     <!--begin::Required Plugin(AdminLTE)-->
     <link rel="stylesheet" href=  "{{ asset('admin/css/adminlte.css') }}" />
     <!--end::Required Plugin(AdminLTE)-->
+
+    <link rel="stylesheet" href="{{ asset('vet/css/vendor/font-awesome.min.css') }}" />
 
     <!-- apexcharts -->
     <link

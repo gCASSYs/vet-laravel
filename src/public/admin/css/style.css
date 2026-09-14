@@ -269,3 +269,71 @@ a, button, input, select, textarea {
 }
 
 @media (forced-colors: active) { html { scrollbar-color: auto; } }
+
+/* Animalis: tokens derivados da identidade visual do site público. */
+:root,
+[data-bs-theme="light"] {
+  --barista-black: #163a3a;
+  --barista-espresso: #163a3a;
+  --barista-coffee: #275956;
+  --barista-caramel: #c96b4b;
+  --barista-olive: #5f8a70;
+  --barista-cream: #fffdf8;
+  --barista-bg: #f7efe5;
+  --barista-surface: #fffdf8;
+  --barista-surface-soft: #dde8df;
+  --barista-text: #242424;
+  --barista-muted: #6f6a63;
+  --barista-heading: #163a3a;
+  --barista-border: #c9d8ce;
+  --barista-primary: #c96b4b;
+  --barista-primary-hover: #b85e40;
+  --barista-on-primary: #fffdf8;
+  --barista-focus: #c96b4b;
+  --barista-shadow: 0 12px 28px rgba(22, 58, 58, 0.1);
+}
+
+[data-bs-theme="dark"] {
+  --barista-black: #102929;
+  --barista-espresso: #163a3a;
+  --barista-coffee: #8bb5a2;
+  --barista-caramel: #e29170;
+  --barista-olive: #86ae91;
+  --barista-cream: #fffdf8;
+  --barista-bg: #102929;
+  --barista-surface: #183535;
+  --barista-surface-soft: #214442;
+  --barista-text: #f5f0e9;
+  --barista-muted: #c0c9c2;
+  --barista-heading: #fffdf8;
+  --barista-border: #3e6864;
+  --barista-primary: #e29170;
+  --barista-primary-hover: #efa181;
+  --barista-on-primary: #102929;
+  --barista-focus: #e29170;
+  --barista-shadow: 0 14px 32px rgba(0, 0, 0, 0.3);
+}
+
+body { font-family: Arvo, Georgia, serif; letter-spacing: 0; }
+h1, h2, h3, h4, h5, h6, .card-title, .modal-title, .brand-link { font-family: Bitter, Georgia, serif; }
+p, td, th, label, input, select, button, .dropdown-item, .breadcrumb, .pagination, .badge { font-family: Arvo, Georgia, serif; letter-spacing: 0; }
+.app-header { background: var(--barista-black) !important; }
+.sidebar-brand { background: var(--barista-cream) !important; border-bottom-color: var(--barista-border); }
+.sidebar-brand .brand-link { background: var(--barista-cream); }
+.animalis-admin-logo { display: inline-flex; align-items: center; gap: 0.7rem; color: #163a3a; line-height: 1; }
+.animalis-admin-logo > .fa { color: #c96b4b; font-size: 2.35rem; }
+.animalis-admin-logo > span { display: flex; flex-direction: column; align-items: flex-start; }
+.animalis-admin-logo strong { color: #163a3a; font-family: Bitter, Georgia, serif; font-size: 1.65rem; letter-spacing: 0.04em; text-transform: uppercase; }
+.animalis-admin-logo small { margin-top: 0.28rem; color: #6f6a63; font-family: Arvo, Georgia, serif; font-size: 0.56rem; letter-spacing: 0.16em; text-transform: uppercase; }
+.sidebar-menu .nav-link.active { background: linear-gradient(100deg, #c96b4b, #b85e40); box-shadow: 0 7px 16px rgba(201, 107, 75, 0.28); }
+.sidebar-menu .nav-header, .sidebar-menu .nav-link .nav-icon { color: #e8a487; }
+.barista-footer-brand { color: #f3b29a; }
+
+/* Tipografia e controles administrativos: mesma família visual do frontend. */
+.btn { font-family: Arvo, Georgia, serif !important; letter-spacing: 0 !important; }
+.table thead th { font-family: Bitter, Georgia, serif; letter-spacing: 0.04em; }
+.animalis-topbar-title { display: inline-flex; align-items: center; gap: 0.5rem; margin-left: 0.4rem; color: var(--barista-cream); font-family: Bitter, Georgia, serif; font-size: 1.05rem; text-decoration: none; }
+.animalis-topbar-title:hover, .animalis-topbar-title:focus-visible { color: #f3b29a; }
+.animalis-topbar-title .fa { color: #e29170; }
+.animalis-view-site { color: var(--barista-cream); border: 1px solid rgba(255, 253, 248, 0.45); background: transparent; }
+.animalis-view-site:hover, .animalis-view-site:focus-visible { color: #fffdf8; border-color: #e29170; background: rgba(255, 253, 248, 0.12); }

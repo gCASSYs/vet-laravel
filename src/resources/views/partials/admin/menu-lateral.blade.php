@@ -3,16 +3,13 @@
         <div class="sidebar-brand">
           <!--begin::Brand Link-->
           <a href="{{ route('dashboard') }}" class="brand-link" aria-label="Ir para o dashboard">
-            <!--begin::Brand Image-->
-            <img
-              src="{{ asset('vet/assets/logo.png') }}"
-              alt="Logo Casa do Barista"
-              class="brand-image"
-            />
-            <!--end::Brand Image-->
-            <!--begin::Brand Text-->
-            
-            <!--end::Brand Text-->
+            <span class="animalis-admin-logo" aria-label="Animalis Clínica Veterinária">
+              <i class="fa fa-paw" aria-hidden="true"></i>
+              <span>
+                <strong>Animalis</strong>
+                <small>Clínica Veterinária</small>
+              </span>
+            </span>
           </a>
           <!--end::Brand Link-->
         </div>
@@ -74,32 +71,32 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="">
-                  <i class="nav-icon bi bi-graph-up"></i>
+                <a href="{{ route('admin.detalhes-servico.index') }}" class="nav-link {{ request()->routeIs('admin.detalhes-servico.index') ? 'active' : '' }}" @if(request()->routeIs('admin.detalhes-servico.index')) aria-current="page" @endif>
+                  <i class="nav-icon bi bi-card-text"></i>
                   <p>Detalhes dos Serviços</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="">
-                  <i class="nav-icon bi bi-graph-up"></i>
+                <a href="{{ route('admin.funcionarios.index') }}" class="nav-link {{ request()->routeIs('admin.funcionarios.index') ? 'active' : '' }}" @if(request()->routeIs('admin.funcionarios.index')) aria-current="page" @endif>
+                  <i class="nav-icon bi bi-people-fill"></i>
                   <p>Equipe</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="">
-                  <i class="nav-icon bi bi-graph-up"></i>
+                <a href="{{ route('admin.depoimentos.index') }}" class="nav-link {{ request()->routeIs('admin.depoimentos.index') ? 'active' : '' }}" @if(request()->routeIs('admin.depoimentos.index')) aria-current="page" @endif>
+                  <i class="nav-icon bi bi-chat-quote-fill"></i>
                   <p>Depoimento </p>
                 </a>
               </li>
                     <li class="nav-item">
-                <a href="">
-                  <i class="nav-icon bi bi-graph-up"></i>
+                <a href="{{ route('admin.faqs.index') }}" class="nav-link {{ request()->routeIs('admin.faqs.index') ? 'active' : '' }}" @if(request()->routeIs('admin.faqs.index')) aria-current="page" @endif>
+                  <i class="nav-icon bi bi-question-circle-fill"></i>
                   <p>FAQ</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="">
-                  <i class="nav-icon bi bi-graph-up"></i>
+                <a href="{{ route('admin.galerias.index') }}" class="nav-link {{ request()->routeIs('admin.galerias.index') ? 'active' : '' }}" @if(request()->routeIs('admin.galerias.index')) aria-current="page" @endif>
+                  <i class="nav-icon bi bi-images"></i>
                   <p>Galeria</p>
                 </a>
               </li>
@@ -108,22 +105,24 @@
 
               <li class="nav-header">Configurações</li>
               <li class="nav-item">
-                <a href=""></i>
+                <a href="{{ route('admin.configuracoes-site.index') }}" class="nav-link {{ request()->routeIs('admin.configuracoes-site.index') ? 'active' : '' }}" @if(request()->routeIs('admin.configuracoes-site.index')) aria-current="page" @endif>
+                  <i class="nav-icon bi bi-gear-fill"></i>
                   <p>
                     Configurações do Site
                   </p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="">
-                  <i class="nav-icon bi bi-person-fill"></i>
+                <a href="{{ route('admin.horarios-servico.index') }}" class="nav-link {{ request()->routeIs('admin.horarios-servico.index') ? 'active' : '' }}" @if(request()->routeIs('admin.horarios-servico.index')) aria-current="page" @endif>
+                  <i class="nav-icon bi bi-clock-fill"></i>
                   <p>Horários de atendimento</p>
                 </a>
               </li>
 
               <li class="nav-header">Comunicação</li>
               <li class="nav-item">
-                <a href=""></i>
+                <a href="{{ route('admin.mensagens-contato.index') }}" class="nav-link {{ request()->routeIs('admin.mensagens-contato.index') ? 'active' : '' }}" @if(request()->routeIs('admin.mensagens-contato.index')) aria-current="page" @endif>
+                  <i class="nav-icon bi bi-envelope-fill"></i>
                   <p>
                     Mensagens de Contato
                   </p>
@@ -134,28 +133,28 @@
               <li class="nav-header">Gestão</li>
               
               <li class="nav-item">
-                <a href="">
-                  <i class="nav-icon bi bi-image-fill"></i>
+                <a href="{{ route('admin.agendamentos.index') }}" class="nav-link {{ request()->routeIs('admin.agendamentos.index') ? 'active' : '' }}" @if(request()->routeIs('admin.agendamentos.index')) aria-current="page" @endif>
+                  <i class="nav-icon bi bi-calendar-check-fill"></i>
                   <p>Agendamento</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="">
-                  <i class="nav-icon bi bi-image"></i>
+                <a href="{{ route('admin.clientes.index') }}" class="nav-link {{ request()->routeIs('admin.clientes.index') ? 'active' : '' }}" @if(request()->routeIs('admin.clientes.index')) aria-current="page" @endif>
+                  <i class="nav-icon bi bi-person-vcard-fill"></i>
                   <p>
                     Clientes
                   </p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="">
-                  <i class="nav-icon bi bi-envelope-paper"></i>
+                <a href="{{ route('admin.pets.index') }}" class="nav-link {{ request()->routeIs('admin.pets.index') ? 'active' : '' }}" @if(request()->routeIs('admin.pets.index')) aria-current="page" @endif>
+                  <i class="nav-icon bi bi-heart-fill"></i>
                   <p>Pets</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="">
-                  <i class="nav-icon bi bi-hourglass-split"></i>
+                <a href="{{ route('admin.funcionarios.index') }}" class="nav-link {{ request()->routeIs('admin.funcionarios.index') ? 'active' : '' }}" @if(request()->routeIs('admin.funcionarios.index')) aria-current="page" @endif>
+                  <i class="nav-icon bi bi-person-badge-fill"></i>
                   <p>Funcionários</p>
                 </a>
               </li>
