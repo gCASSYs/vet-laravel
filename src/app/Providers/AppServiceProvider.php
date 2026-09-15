@@ -2,8 +2,10 @@
 
 namespace App\Providers;
 
-use App\Models\ConfiguracaoSite;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Schema;
+use App\Models\ConfiguracaoSite;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -20,8 +22,17 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        $configuracao = ConfiguracaoSite::where('id_configuracao', 1)->first();
 
-        view()->share('configuracao', $configuracao);
+        // Compartilha as configurações gerais do site
+        if (Schema::hasTable('tbl_configuracao_site')) {
+
+            $configuracao = ConfiguracaoSite::where('id_configuracao', 1)->first();
+
+            view()->share('configuracao', $configuracao);
+
+        }
+
+     
+
     }
 }
